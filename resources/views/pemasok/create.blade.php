@@ -35,7 +35,7 @@
                 class="form-control @error('nama_kontak') is-invalid @enderror" 
                 name="nama_kontak" 
                 id="nama_kontak" 
-                value="{{ old('nama_kontak') ??  $pemasok->nama_kontak }}" 
+                value="{{ old('nama_kontak') }}" 
                 required>
             @error('nama_kontak')
                 <p class="text-danger">{{ $message }}</p>

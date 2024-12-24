@@ -12,7 +12,7 @@
     </div>
 </div>
 <div class="card px-3 py-3">
-    <form action="{{ route('barang.update', $pemasok) }}" method="POST">
+    <form action="{{ route('barang.update', $barang) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="mb-3">

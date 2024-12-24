@@ -12,7 +12,7 @@
     </div>
 </div>
 <div class="card px-3 py-3">
-    <form action="{{ route('barang.update', $pemasok) }}" method="POST">
+    <form action="{{ route('barang.store') }}" method="POST">
         @csrf
         @method('POST')
         <div class="mb-3">
@@ -22,7 +22,7 @@
                 class="form-control @error('nama_barang') is-invalid @enderror" 
                 name="nama_barang" 
                 id="nama_barang" 
-                value="{{ old('nama_barang') ?? $barang->nama_barang }}" 
+                value="{{ old('nama_barang')}}" 
                 required>
             @error('nama_barang')
                 <p class="text-danger">{{ $message }}</p>
@@ -35,7 +35,7 @@
                 class="form-control @error('merk') is-invalid @enderror" 
                 name="merk" 
                 id="merk" 
-                value="{{ old('merk') ??  $barang->merk }}" 
+                value="{{ old('merk') }}" 
                 required>
             @error('merk')
                 <p class="text-danger">{{ $message }}</p>
@@ -48,7 +48,7 @@
                 class="form-control @error('tipe') is-invalid @enderror" 
                 name="tipe" 
                 id="tipe" 
-                value="{{ old('tipe') ??  $barang->tipe }}" 
+                value="{{ old('tipe') }}" 
                 required>
             @error('tipe')
                 <p class="text-danger">{{ $message }}</p>
@@ -61,7 +61,7 @@
                 class="form-control @error('satuan') is-invalid @enderror" 
                 name="satuan" 
                 id="satuan" 
-                value="{{ old('satuan') ?? $barang->satuan }}" 
+                value="{{ old('satuan') }}" 
                 required>
             @error('satuan')
                 <p class="text-danger">{{ $message }}</p>

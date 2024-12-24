@@ -16,7 +16,7 @@
         @csrf
         @method('PUT')
         <div class="mb-3">
-            <label for="nama_karyawan">Nama Pemasok</label>
+            <label for="nama_pemasok">Nama Pemasok</label>
             <input 
                 type="text" 
                 class="form-control @error('nama_pemasok') is-invalid @enderror" 
@@ -48,7 +48,7 @@
                 class="form-control @error('nomor_hp') is-invalid @enderror" 
                 name="nomor_hp" 
                 id="nomor_hp" 
-                value="{{ old('nomor_hp') ??  $karyawan->nomor_hp }}" 
+                value="{{ old('nomor_hp') ??  $pemasok->nomor_hp }}" 
                 required>
             @error('nomor_hp')
                 <p class="text-danger">{{ $message }}</p>
@@ -61,7 +61,7 @@
                 class="form-control @error('alamat') is-invalid @enderror" 
                 name="alamat" 
                 id="alamat" 
-                value="{{ old('alamat') ?? $karyawan->alamat }}" 
+                value="{{ old('alamat') ?? $pemasok->alamat }}" 
                 required>
             @error('alamat')
                 <p class="text-danger">{{ $message }}</p>
